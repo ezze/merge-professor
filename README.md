@@ -1,5 +1,7 @@
 # merge-professor
 
+[![Build Status](https://travis-ci.org/ezze/merge-professor.svg?branch=master)](https://travis-ci.org/ezze/merge-professor)
+
 Advanced recursive merge utility for JavaScript objects and arrays.
 
 ## Features
