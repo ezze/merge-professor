@@ -10,7 +10,8 @@
     "transpile": "babel src -d lib",
     "browserify": "mkdirp dist && browserify lib/merge.js --standalone mergeProfessor -o dist/merge.js -d",
     "uglify": "uglifyjs -c warnings=false -o dist/merge.min.js -- dist/merge.js",
-    "test": "mocha --require babel-register test/*.js"
+    "test": "mocha --require babel-register test/*.js",
+    "prepublish": "npm run test && npm run rebuild"
   },
   "repository": {
     "type": "git",
