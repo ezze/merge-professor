@@ -2,8 +2,9 @@
   "name": "merge-professor",
   "version": "1.0.0",
   "description": "Advanced recursive merge utility for JavaScript objects and arrays.",
-  "main": "index.js",
+  "main": "lib/merge.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "mocha --require babel-register test/*.js"
   },
   "repository": {
@@ -23,7 +24,9 @@
   },
   "homepage": "https://github.com/ezze/merge-professor#readme",
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
     "babel-register": "^6.18.0",
     "chai": "^3.5.0",
