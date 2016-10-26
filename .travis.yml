@@ -9,5 +9,7 @@ branches:
     - dev
 install:
   - npm install
+before_script:
+  - npm test
 script:
   - npm run build
