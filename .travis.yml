@@ -13,3 +13,5 @@ before_script:
   - npm test
 script:
   - npm run build
+after_success:
+  - npm run coverage
