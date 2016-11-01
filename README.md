@@ -1,13 +1,13 @@
 # merge-professor
 
-[![Build Status](https://travis-ci.org/ezze/merge-professor.svg?branch=master)](https://travis-ci.org/ezze/merge-professor)
+[![Build Status](https://travis-ci.org/ezze/merge-professor.svg?branch=dev)](https://travis-ci.org/ezze/merge-professor)
 [![Coverage Status](https://coveralls.io/repos/github/ezze/merge-professor/badge.svg)](https://coveralls.io/github/ezze/merge-professor)
 
 Advanced recursive merge utility for JavaScript objects and arrays.
 
 ## Features
 
-- Supports multiple objects or arrays to merge for single function call.
+- Supports multiple objects or arrays to merge in single function call.
 - Merges objects recursively.
 - Allows to merge object items of arrays by specified identifier fields.
 - Has an option to merge properties existing only in first object. 
