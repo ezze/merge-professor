@@ -13,7 +13,7 @@
     "lint": "eslint ./src",
     "test": "eslint -c .eslintrc.test.json ./test && mocha --require babel-register -- test/*.js",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "prepublish": "npm test && npm run rebuild"
+    "prepublish": "npm run lint && npm test && npm run rebuild"
   },
   "repository": {
     "type": "git",
