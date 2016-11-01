@@ -5,7 +5,7 @@
   "main": "lib/merge.js",
   "scripts": {
     "clean": "rimraf lib dist",
-    "build": "npm run transpile && npm run browserify && npm run uglify",
+    "build": "npm run lint && npm run transpile && npm run browserify && npm run uglify",
     "rebuild": "npm run clean && npm run build",
     "transpile": "babel src -d lib",
     "browserify": "mkdirp dist && browserify lib/merge.js --standalone mergeProfessor -o dist/merge.js -d",
