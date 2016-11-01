@@ -10,7 +10,8 @@
     "transpile": "babel src -d lib",
     "browserify": "mkdirp dist && browserify lib/merge.js --standalone mergeProfessor -o dist/merge.js -d",
     "uglify": "uglifyjs -c warnings=false -o dist/merge.min.js -- dist/merge.js",
-    "test": "mocha --require babel-register -- test/*.js",
+    "lint": "eslint ./src",
+    "test": "eslint -c .eslintrc.test.json ./test && mocha --require babel-register -- test/*.js",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm test && npm run rebuild"
   },
@@ -39,6 +40,8 @@
     "browserify": "^13.1.1",
     "chai": "^3.5.0",
     "coveralls": "^2.11.14",
+    "eslint": "^3.9.1",
+    "eslint-config-ezze": "0.0.1",
     "mkdirp": "^0.5.1",
     "mocha": "^3.1.2",
     "nyc": "^8.3.2",
