@@ -1,6 +1,6 @@
 {
   "name": "merge-professor",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Advanced recursive merge utility for JavaScript objects and arrays.",
   "main": "lib/merge.js",
   "scripts": {
