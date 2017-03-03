@@ -1,5 +1,6 @@
 # merge-professor
 
+[![NPM Version](https://badge.fury.io/js/merge-professor.svg)](https://badge.fury.io/js/merge-professor)
 [![Build Status](https://travis-ci.org/ezze/merge-professor.svg?branch=dev)](https://travis-ci.org/ezze/merge-professor)
 [![Coverage Status](https://coveralls.io/repos/github/ezze/merge-professor/badge.svg)](https://coveralls.io/github/ezze/merge-professor)
 
@@ -166,6 +167,10 @@ In order to build library run:
 Run unit tests:
     
     npm test
+    
+In order to run tests with [Coveralls](http://coveralls.io) locally you have to provide `COVERALLS_REPO_TOKEN`:
+        
+    COVERALLS_REPO_TOKEN=<token> npm run test:coverage
     
 ## Contribution
     
