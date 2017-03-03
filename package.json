@@ -12,8 +12,8 @@
     "uglify": "uglifyjs -c warnings=false -o dist/merge.min.js -- dist/merge.js",
     "lint": "eslint ./src",
     "lint:test": "eslint -c .eslintrc.test.json ./test",
-    "test": "mocha --recursive --require babel-register -- test",
-    "test:coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "test": "mocha --recursive --require babel-register test",
+    "test:coverage": "istanbul cover _mocha -- --recursive --require babel-register test && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm run lint && npm test && npm run rebuild"
   },
   "repository": {
@@ -43,9 +43,9 @@
     "coveralls": "^2.11.14",
     "eslint": "^3.9.1",
     "eslint-config-ezze": "0.0.1",
+    "istanbul": "^1.0.0-alpha.2",
     "mkdirp": "^0.5.1",
     "mocha": "^3.1.2",
-    "nyc": "^8.3.2",
     "rimraf": "^2.5.4",
     "uglify-js": "^2.7.4"
   }
