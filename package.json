@@ -11,8 +11,9 @@
     "browserify": "mkdirp dist && browserify lib/merge.js --standalone mergeProfessor -o dist/merge.js -d",
     "uglify": "uglifyjs -c warnings=false -o dist/merge.min.js -- dist/merge.js",
     "lint": "eslint ./src",
-    "test": "eslint -c .eslintrc.test.json ./test && mocha --require babel-register -- test/*.js",
-    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "lint:test": "eslint -c .eslintrc.test.json ./test",
+    "test": "mocha --recursive --require babel-register -- test",
+    "test:coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "prepublish": "npm run lint && npm test && npm run rebuild"
   },
   "repository": {
