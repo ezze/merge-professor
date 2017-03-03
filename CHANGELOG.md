@@ -1,5 +1,7 @@
 ## Changelog
 
+### 1.0.4
+
 - Test coverage is rewritten with [Istanbul](https://istanbul.js.org/).
 
 ### 1.0.3
