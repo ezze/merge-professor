@@ -12,6 +12,6 @@ install:
 before_script:
   - npm run lint
   - npm run lint:test
-  - npm test:coverage
+  - npm run test:coverage
 script:
   - npm run build
