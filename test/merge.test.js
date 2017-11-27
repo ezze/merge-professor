@@ -9,9 +9,8 @@ describe('merge', () => {
     });
 
     it('empty and plain objects', () => {
-        let o = { id: 25994, name: 'Terra', visible: true };
-        let expected = o;
-
+        const o = { id: 25994, name: 'Terra', visible: true };
+        const expected = o;
         merge({}, o).should.deep.equal(expected);
         merge(o, {}).should.deep.equal(expected);
     });
@@ -97,7 +96,7 @@ describe('merge', () => {
     });
 
     it('two objects with nested intersected plain objects', () => {
-        let o1 = {
+        const o1 = {
             language: {
                 en: 'English',
                 ru: 'Русский'
@@ -105,7 +104,7 @@ describe('merge', () => {
             sidebarPanelId: 'satellite'
         };
 
-        let o2 = {
+        const o2 = {
             language: {
                 ru: 'Russian',
                 de: 'German'
@@ -136,8 +135,8 @@ describe('merge', () => {
     });
 
     it('empty array and plain array', () => {
-        let a = [1, 2, 3],
-            expected = a;
+        const a = [1, 2, 3];
+        const expected = a;
         merge([], a).should.deep.equal(expected);
         merge(a, []).should.deep.equal(expected);
     });
@@ -155,12 +154,12 @@ describe('merge', () => {
     });
 
     it('two arrays of objects with intersected identifiers', () => {
-        let a1 = [
+        const a1 = [
             { id: 25994, name: 'Terra', visible: true },
             { id: 27424, name: 'Aqua', visible: false }
         ];
 
-        let a2 = [
+        const a2 = [
             { id: 27424, name: 'AQUA' },
             { id: 25994, visible: false }
         ];
@@ -188,14 +187,14 @@ describe('merge', () => {
     });
 
     it('two objects with nested arrays', () => {
-        let o1 = {
+        const o1 = {
             satellites: [
                 { id: 25994, name: 'Terra', visible: true },
                 { id: 27424, name: 'Aqua', visible: false }
             ]
         };
 
-        let o2 = {
+        const o2 = {
             satellites: [
                 { id: 27424, name: 'AQUA', visible: true },
                 { id: 40069, name: 'Terra' }
@@ -237,8 +236,8 @@ describe('merge', () => {
     });
 
     it('two plain objects, overwriting existing only', () => {
-        let o1 = { id: 25994, name: 'Terra', visible: false };
-        let o2 = { sidebarPanelId: 'satellite', visible: true };
+        const o1 = { id: 25994, name: 'Terra', visible: false };
+        const o2 = { sidebarPanelId: 'satellite', visible: true };
 
         merge(o1, o2, true).should.deep.equal({
             id: 25994, name: 'Terra', visible: true
@@ -249,12 +248,12 @@ describe('merge', () => {
     });
 
     it('two objects with nested objects, overwriting existing only', () => {
-        let o1 = {
+        const o1 = {
             language: { en: 'English', ru: 'Русский' },
             sidebarPanelId: 'satellite',
             user: { name: 'Alice', age: 30 }
         };
-        let o2 = {
+        const o2 = {
             language: { ru: 'Russian', de: 'German' },
             sidebarPanelId: 'geocoding'
         };
@@ -271,11 +270,11 @@ describe('merge', () => {
     });
 
     it('two objects with plain nested arrays, overwriting existing only', () => {
-        let o1 = {
+        const o1 = {
             language: ['en', 'ru'],
             sidebarPanelId: 'satellite'
         };
-        let o2 = {
+        const o2 = {
             language: ['de'],
             sidebarPanelId: 'geocoding',
             user: ['Alice', 'Bob']
@@ -293,13 +292,13 @@ describe('merge', () => {
     });
 
     it('two objects with nested arrays, overwriting existing only', () => {
-        let o1 = {
+        const o1 = {
             satellites: [
                 { id: 25994, name: 'Terra', visible: true },
                 { id: 27424, name: 'Aqua', visible: false }
             ]
         };
-        let o2 = {
+        const o2 = {
             satellites: [
                 { id: 25994, visible: false },
                 { id: 40069, name: 'Meteor-M №2', visible: true }

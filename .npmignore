@@ -2,4 +2,5 @@
 coverage
 src
 test
+yarn.lock
 *.log
