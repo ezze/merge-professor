@@ -50,7 +50,7 @@ describe('each', () => {
 
         Satellite.prototype.visible = false;
 
-        let own = [];
+        const own = [];
         each(new Satellite, (value, key) => {
             own.push(key);
         });

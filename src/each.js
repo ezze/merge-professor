@@ -9,7 +9,7 @@ function each(instance, callback) {
         }
     }
     else {
-        for (let key in instance) {
+        for (const key in instance) {
             if (!instance.hasOwnProperty(key)) {
                 continue;
             }

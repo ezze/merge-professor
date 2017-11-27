@@ -17,13 +17,13 @@ describe('find index by properties', () => {
         });
     };
 
-    let a = [
+    const a = [
         { id: 25994, name: 'Terra', visible: true },
         { id: 27424, name: 'Aqua', visible: false },
         { id: 40069, name: 'Meteor-M №2' }
     ];
 
-    let b = [
+    const b = [
         'one',
         { id: 25994, name: 'Terra', visible: true },
         5,
