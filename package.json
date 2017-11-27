@@ -15,7 +15,7 @@
     "test": "mocha --recursive --require babel-register test",
     "test:coverage": "istanbul cover _mocha -- --recursive --require babel-register test",
     "test:coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
-    "prepublish": "npm run lint && npm test && npm run rebuild"
+    "prepublishOnly": "npm run lint && npm test && npm run rebuild"
   },
   "repository": {
     "type": "git",
