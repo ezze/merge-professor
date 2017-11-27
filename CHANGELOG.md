@@ -6,6 +6,7 @@
 - Node.js 7, 8 and 9 are supported in Travis CI.
 - [babel-preset-es2015](https://www.npmjs.com/package/babel-preset-es2015) is replaced by
 [babel-preset-env](https://github.com/babel/babel-preset-env).
+- `yarn.lock` file is added.
 
 ### 1.0.5 (2017-03-04)
 
