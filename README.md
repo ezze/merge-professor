@@ -1,10 +1,9 @@
 # merge-professor
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ezze/merge-professor.svg)](https://greenkeeper.io/)
-
 [![NPM Version](https://badge.fury.io/js/merge-professor.svg)](https://badge.fury.io/js/merge-professor)
 [![Build Status](https://travis-ci.org/ezze/merge-professor.svg?branch=dev)](https://travis-ci.org/ezze/merge-professor)
 [![Coverage Status](https://coveralls.io/repos/github/ezze/merge-professor/badge.svg)](https://coveralls.io/github/ezze/merge-professor)
+[![Greenkeeper badge](https://badges.greenkeeper.io/ezze/merge-professor.svg)](https://greenkeeper.io/)
 
 Advanced recursive merge utility for JavaScript objects and arrays.
 
