@@ -11,9 +11,10 @@
     "browserify": "mkdirp dist && browserify lib/merge.js --standalone mergeProfessor -o dist/merge.js -d",
     "uglify": "uglifyjs -c warnings=false -o dist/merge.min.js -- dist/merge.js",
     "lint": "eslint ./src",
-    "lint:test": "eslint -c .eslintrc.test.json ./test",
+    "lint:test": "eslint -c test/.eslintrc.json ./test",
     "test": "mocha --recursive --require babel-register test",
-    "test:coverage": "istanbul cover _mocha -- --recursive --require babel-register test && cat ./coverage/lcov.info | coveralls",
+    "test:coverage": "istanbul cover _mocha -- --recursive --require babel-register test",
+    "test:coveralls": "npm run test:coverage && cat ./coverage/lcov.info | coveralls",
     "prepublish": "npm run lint && npm test && npm run rebuild"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.0",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.18.0",
     "browserify": "^14.5.0",
     "chai": "^4.1.2",
@@ -47,8 +49,5 @@
     "mocha": "^4.0.1",
     "rimraf": "^2.5.4",
     "uglify-js": "^3.2.0"
-  },
-  "dependencies": {
-    "babel-preset-env": "^1.6.1"
   }
 }
