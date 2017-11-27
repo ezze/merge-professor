@@ -1,7 +1,7 @@
 import each from './each';
 
 function getOrderedProperties(o, fields) {
-    let result = [];
+    const result = [];
     each(fields, field => {
         if (o[field] !== undefined) {
             result.push({

@@ -9,9 +9,10 @@ import findIndexByProperties from './findIndexByProperties';
 import getOrderedProperties from './getOrderedProperties';
 
 function merge() {
-    let objects = Array.prototype.slice.call(arguments),
-        overwriteExistingOnly = false,
-        ids = [];
+    const objects = Array.prototype.slice.call(arguments);
+    const ids = [];
+    let overwriteExistingOnly = false;
+
 
     if (objects.length && isBoolean(objects[objects.length - 1])) {
         overwriteExistingOnly = objects.pop();
@@ -21,10 +22,10 @@ function merge() {
         ids.push(objects.pop());
     }
 
-    let result = isArray(objects[0]) ? [] : {};
+    const result = isArray(objects[0]) ? [] : {};
 
     each(objects, (o, i) => {
-        let createNew = i === 0 || !overwriteExistingOnly;
+        const createNew = i === 0 || !overwriteExistingOnly;
         each(o, (value, name) => {
             // Value is array
             if (isArray(value)) {
@@ -45,7 +46,7 @@ function merge() {
             // Value is object
             if (isObject(value)) {
                 if (isArray(result)) {
-                    let itemIndex = findIndexByProperties(result, getOrderedProperties(value, ids));
+                    const itemIndex = findIndexByProperties(result, getOrderedProperties(value, ids));
                     if (itemIndex >= 0) {
                         result[itemIndex] = merge.apply(null, [result[itemIndex], value]
                             .concat(ids)
