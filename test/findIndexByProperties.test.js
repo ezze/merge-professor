@@ -54,26 +54,26 @@ describe('find index by properties', () => {
 
     it('two properties', () => {
         test(a, [
-            { properties: [{ name: 'id', value: 25994 }, { name: 'name', value: 'Terra'}], result: 0 },
-            { properties: [{ name: 'id', value: 25994 }, { name: 'name', value: 'Aqua'}], result: 0 },
-            { properties: [{ name: 'name', value: 'Aqua'}, { name: 'id', value: 25994}], result: 1 },
-            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'Aqua'}], result: 1 },
-            { properties: [{ name: 'id', value: 40069 }, { name: 'name', value: 'Terra'}], result: 2 },
-            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'NPP'}], result: -1 }
+            { properties: [{ name: 'id', value: 25994 }, { name: 'name', value: 'Terra' }], result: 0 },
+            { properties: [{ name: 'id', value: 25994 }, { name: 'name', value: 'Aqua' }], result: 0 },
+            { properties: [{ name: 'name', value: 'Aqua' }, { name: 'id', value: 25994 }], result: 1 },
+            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'Aqua' }], result: 1 },
+            { properties: [{ name: 'id', value: 40069 }, { name: 'name', value: 'Terra' }], result: 2 },
+            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'NPP' }], result: -1 }
         ]);
     });
 
     it('missing properties', () => {
         test(a, [
             { properties: [{ name: 'identifier', value: 25994 }], result: -1 },
-            { properties: [{ name: 'identifier', value: 25994}, { name: 'name', value: 'Aqua' }], result: 1 }
+            { properties: [{ name: 'identifier', value: 25994 }, { name: 'name', value: 'Aqua' }], result: 1 }
         ]);
     });
 
     it('mixed array', () => {
         test(b, [
             { properties: [{ name: 'id', value: 25994 }], result: 1 },
-            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'Aqua'}], result: 4 }
+            { properties: [{ name: 'id', value: 12345 }, { name: 'name', value: 'Aqua' }], result: 4 }
         ]);
     });
 });
